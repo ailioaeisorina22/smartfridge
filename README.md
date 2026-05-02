@@ -3,7 +3,7 @@ Link video:
 
 Link publicare: https://smart-fridge-app-f0d4.onrender.com/
 
-> **Notă pentru evaluator:** Deoarece aplicația este găzduită pe o infrastructură cloud gratuită (Render.com), serverul intră automat în repaus (sleep) după 15 minute de inactivitate. La prima accesare a linkului, vă rugăm să așteptați aproximativ 30-50 de secunde pentru "trezirea" și repornirea serverului Java. După această primă încărcare, aplicația va răspunde instantaneu.
+> **Notă pentru evaluator:** Deoarece aplicația este găzduită pe o infrastructură cloud gratuită (Render.com), serverul intră automat în sleep după 15 minute de inactivitate. La prima accesare a linkului, vă rugăm să așteptați aproximativ 30-50 de secunde pentru repornirea serverului Java. După această primă încărcare, aplicația va răspunde instantaneu.
 
 ## 1. Introducere
 

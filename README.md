@@ -1,5 +1,6 @@
-# Documentație Proiect: Smart Fridge 🍳
-
+# Documentație: Smart Fridge 🍳
+Link video: 
+Link publicare:
 ## 1. Introducere
 
 **Smart Fridge** este o aplicație web, full-stack, concepută pentru a reduce risipa alimentară și a inspira creativitatea în bucătărie. Aplicația permite utilizatorilor să introducă ingredientele pe care le au deja în frigider și, cu ajutorul Inteligenței Artificiale (Google Gemini API), să genereze rețete personalizate. În plus, aplicația ține cont de preferințele alimentare (ex. vegetarian, fără gluten) și poate genera o listă de cumpărături cu ingredientele lipsă, trimițând-o direct pe adresa de email a utilizatorului.
@@ -8,7 +9,7 @@ Din punct de vedere tehnic, aplicația utilizează o arhitectură cu un backend 
 
 ---
 
-## 2. Descriere problemă (0,25p)
+## 2. Descriere problemă
 
 Problema principală pe care aplicația o rezolvă este risipa alimentară, combinată cu lipsa de inspirație a persoanelor în ceea ce privește gătitul. Adesea, oamenii deschid frigiderul, găsesc o combinație de ingrediente aparent incompatibile și decid fie să arunce o parte din ele, fie să comande mâncare. 
 
@@ -16,7 +17,7 @@ Prin introducerea ingredientelor disponibile în aplicație, utilizatorul prime�
 
 ---
 
-## 3. Descriere API (0,25p)
+## 3. Descriere API
 
 Aplicația backend expune un REST API care face legătura între interfața web și serviciile externe de AI (Gemini) și Email (Resend). API-ul este format din două controllere principale:
 
@@ -38,7 +39,7 @@ Aplicația se bazează pe următoarele trei servicii cloud pentru a oferi funcț
 
 ---
 
-## 4. Flux de date (0,25p)
+## 4. Flux de date
 
 Fluxul de funcționare a aplicației urmează pașii următori:
 1. **Autentificare:** Utilizatorul se autentifică folosind Supabase. Token-ul și identitatea sunt păstrate pe partea de client.
@@ -97,8 +98,16 @@ Fluxul de funcționare a aplicației urmează pașii următori:
 3. **Resend API:** trimiterea listelor de cumpărături se face apelând API-ul Resend, unde autorizarea se face folosind un token de tip "Bearer" citit din variabilele de mediu ale aplicației Spring Boot.
 
 ---
+## 5. Capturi ecran aplicație
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
 
-## 5. Referințe
+---
+
+## 6. Referințe
 
 * **Java Spring Boot:** [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)
 * **Google Gemini API:** [https://ai.google.dev/docs](https://ai.google.dev/docs)

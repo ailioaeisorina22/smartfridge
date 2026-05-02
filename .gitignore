@@ -1,41 +1,50 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Java
+*.class
+*.log
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
 
-# testing
-/coverage
+# Spring Boot
+HELP.md
+.springBeans
 
-# next.js
-/.next/
-/out/
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
 
-# production
-/build
+# Visual Studio Code
+.vscode/
 
-# misc
+# Environment Variables & Secrets
+.env
+.env.*
+application-secret.properties
+application-secret.yml
+
+# Mac/Windows System Files
 .DS_Store
-*.pem
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Other project-specific
+backend/maven/

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fridge 🍳</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Load Supabase JS from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <!-- Loading Spinner -->
+    <div id="loading-view" class="spinner" style="width: 40px; height: 40px; border-width: 4px;"></div>
+
+    <!-- Authentication View -->
+    <main id="auth-view" style="display: none; width: 100%; max-width: 400px; padding: 1rem;">
+        <div class="glass-panel text-center">
+            <h1 class="title">Smart Fridge 🍳</h1>
+            <p class="text-muted mb-2">Autentifica-te pentru a continua</p>
+
+            <form id="auth-form">
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="password" id="password" placeholder="Parola" required />
+                <p id="auth-error" style="color: #ef4444; margin-bottom: 1rem; font-size: 0.9rem; display: none;"></p>
+
+                <button type="submit" id="auth-button">Intra in cont</button>
+            </form>
+
+            <p id="toggle-auth" class="text-muted" style="margin-top: 1.5rem; cursor: pointer;">
+                Nu ai cont? Creeaza unul nou
+            </p>
+        </div>
+    </main>
+
+    <!-- Application View -->
+    <main id="app-view" style="display: none; width: 100%; max-width: 800px; padding: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1 class="title" style="margin-bottom: 0;">Smart Fridge 🍳</h1>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <span id="user-email" class="text-muted"></span>
+                <button id="sign-out"
+                    style="width: auto; padding: 8px 16px; background: transparent; border: 1px solid var(--border-color);">Iesi
+                    din cont</button>
+            </div>
+        </div>
+
+        <div class="glass-panel mb-2">
+            <h2 style="margin-bottom: 1rem;">Ce ai in frigider?</h2>
+            <p class="text-muted mb-2">Scrie ingredientele (ex: pui, rosii, ceapa, smantana) si AI-ul iti va genera o
+                reteta delicioasa.</p>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <input type="text" id="ingredients" placeholder="Ex: 2 oua, lapte, faina..." required
+                    style="padding: 16px; font-size: 1.1rem; margin-bottom: 0;" />
+
+                <div id="preferences-container"
+                    style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem; justify-content: center;">
+                    <label style="cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 4px;">
+                        <input type="checkbox" class="pref-checkbox" value="Vegetarian" style="width: auto; margin: 0;">
+                        Vegetarian
+                    </label>
+                    <label style="cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 4px;">
+                        <input type="checkbox" class="pref-checkbox" value="Vegan" style="width: auto; margin: 0;">
+                        Vegan
+                    </label>
+                    <label style="cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 4px;">
+                        <input type="checkbox" class="pref-checkbox" value="Fara Gluten"
+                            style="width: auto; margin: 0;"> Fara Gluten
+                    </label>
+                    <label style="cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 4px;">
+                        <input type="checkbox" class="pref-checkbox" value="Fara Lactoza"
+                            style="width: auto; margin: 0;"> Fara Lactoza
+                    </label>
+                </div>
+
+                <div style="display: flex; gap: 1rem;">
+                    <button id="btn-recipe" style="flex: 1; background: var(--primary-color);">
+                        Genereaza Reteta
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="generation-msg" class="glass-panel text-center mb-2" style="display: none;"></div>
+
+        <div id="recipe-container" class="glass-panel" style="display: none; animation: fadeIn 0.5s ease;">
+            <h2 style="margin-bottom: 1.5rem; color: var(--primary-color);">Reteta Ta:</h2>
+            <div id="recipe-content" style="white-space: pre-wrap; line-height: 1.6; margin-bottom: 1.5rem;"></div>
+            
+            <button id="btn-list" style="width: 100%; background: #10b981;">
+                Trimite ingredientele lipsa pe email 🛒
+            </button>
+            <div id="list-msg" style="display: none; margin-top: 1rem; text-align: center; font-weight: bold;"></div>
+        </div>
+    </main>
+
+    <script src="/js/app.js?v=8"></script>
+</body>
+
+</html>

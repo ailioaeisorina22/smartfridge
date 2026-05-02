@@ -27,7 +27,7 @@ public class AiService {
     }
 
     public String generateContent(String prompt) {
-        String url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + geminiApiKey;
+        String url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=" + geminiApiKey;
 
         // Construct request body
         ObjectNode rootNode = objectMapper.createObjectNode();

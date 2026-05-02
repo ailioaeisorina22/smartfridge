@@ -1,6 +1,10 @@
 # Documentație: Smart Fridge 🍳
 Link video: 
-Link publicare:
+
+Link publicare: https://smart-fridge-app-f0d4.onrender.com/
+
+> **Notă pentru evaluator:** Deoarece aplicația este găzduită pe o infrastructură cloud gratuită (Render.com), serverul intră automat în repaus (sleep) după 15 minute de inactivitate. La prima accesare a linkului, vă rugăm să așteptați aproximativ 30-50 de secunde pentru "trezirea" și repornirea serverului Java. După această primă încărcare, aplicația va răspunde instantaneu.
+
 ## 1. Introducere
 
 **Smart Fridge** este o aplicație web, full-stack, concepută pentru a reduce risipa alimentară și a inspira creativitatea în bucătărie. Aplicația permite utilizatorilor să introducă ingredientele pe care le au deja în frigider și, cu ajutorul Inteligenței Artificiale (Google Gemini API), să genereze rețete personalizate. În plus, aplicația ține cont de preferințele alimentare (ex. vegetarian, fără gluten) și poate genera o listă de cumpărături cu ingredientele lipsă, trimițând-o direct pe adresa de email a utilizatorului.

@@ -64,7 +64,7 @@ Fluxul de funcționare a aplicației urmează pașii următori:
   "action": "recipe" // sau "shopping_list"
 }
 ```
-> **Nota arhitecturala:** Cand se face request pentru `shopping_list`, frontend-ul concatenează automat la finalul parametrului `ingredients` întregul text HTML al rețetei anterior generate. Astfel, AI-ul primește contextul complet direct din interfață, eliminând necesitatea ca serverul backend să stocheze starea rețetelor în memoria RAM.
+> **Nota:** Cand se face request pentru `shopping_list`, frontend-ul concatenează automat la finalul parametrului `ingredients` întregul text HTML al rețetei anterior generate. Astfel, AI-ul primește contextul complet direct din interfață, eliminând necesitatea ca serverul backend să stocheze starea rețetelor în memoria RAM.
 * **Response Body (JSON - Success):**
 ```json
 {

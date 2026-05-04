@@ -1,5 +1,5 @@
 # Documentație: Smart Fridge 🍳
-Link video: 
+Link video: https://youtu.be/FElNqB4EKXk
 
 Link publicare: https://smart-fridge-app-f0d4.onrender.com/
 
